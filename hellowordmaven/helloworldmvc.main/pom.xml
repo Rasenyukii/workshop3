@@ -24,8 +24,21 @@
     </dependency>
     <dependency>
     	<groupId>fr.exia</groupId>
-    	<artifactId>helloworldmvc.contract</artifactId>
+    	<artifactId>hellowordmvc.controller</artifactId>
     	<version>0.0.1-SNAPSHOT</version>
+    	<type>pom</type>
+    </dependency>
+    <dependency>
+    	<groupId>fr.exia</groupId>
+    	<artifactId>hellowordmvc.model</artifactId>
+    	<version>0.0.1-SNAPSHOT</version>
+    	<type>pom</type>
+    </dependency>
+    <dependency>
+    	<groupId>fr.exia</groupId>
+    	<artifactId>hellowordmvc.view</artifactId>
+    	<version>0.0.1-SNAPSHOT</version>
+    	<type>pom</type>
     </dependency>
   </dependencies>
   <packaging>pom</packaging>
