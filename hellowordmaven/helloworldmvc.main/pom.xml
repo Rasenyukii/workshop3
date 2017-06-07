@@ -24,22 +24,44 @@
     </dependency>
     <dependency>
     	<groupId>fr.exia</groupId>
-    	<artifactId>hellowordmvc.controller</artifactId>
+    	<artifactId>hellowordmvc.view</artifactId>
     	<version>0.0.1-SNAPSHOT</version>
-    	<type>pom</type>
     </dependency>
     <dependency>
     	<groupId>fr.exia</groupId>
     	<artifactId>hellowordmvc.model</artifactId>
     	<version>0.0.1-SNAPSHOT</version>
-    	<type>pom</type>
     </dependency>
     <dependency>
     	<groupId>fr.exia</groupId>
-    	<artifactId>hellowordmvc.view</artifactId>
+    	<artifactId>hellowordmvc.controller</artifactId>
     	<version>0.0.1-SNAPSHOT</version>
-    	<type>pom</type>
     </dependency>
   </dependencies>
   <packaging>pom</packaging>
 </project>
+<buil>
+	<plugins>
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-shade-plugin</artifactId>
+			<version>3.0.0</version>
+			<executions>
+				<execution>
+					<phase>package</phase>
+					<goals>
+						<goal>shade</goal>
+					</goals>
+					<configuration>
+						<transformers>
+							<transformer
+	implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+								<mainClass>helloworldmvc.main.Main</mainClass>
+							</transformer>
+						</transformers>
+					</configuration>
+				</execution>
+			</executions>
+		</plugin>
+	</plugins>
+</buil>
